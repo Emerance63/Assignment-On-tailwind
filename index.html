@@ -5,6 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tailwind</title>
     <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+  @keyframes typing {
+    0%, 10% { width: 0% }
+    40%, 60% { width: 100% }
+    90%, 100% { width: 0% }
+  }
+  @keyframes blink {
+    50% { border-color: transparent }
+  }
+  .animate-typewriter {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid white;
+    animation: 
+      typing 4s steps(15) infinite, 
+      blink  infinite step-end;
+  }
+</style>
+
 </head>
 <body class="bg-gray-900 text-white">
 <header>
@@ -54,7 +74,7 @@
       <h1 class="wow fadeInUp font-heading mb-5 text-2xl font-semibold sm:text-4xl md:text-[50px] md:leading-[60px] dark:text-white" data-wow-delay=".3s" style="visibility: visible; animation-delay: 0.3s;">
                 Digital Solutions for Your
                 <!-- <span class="underline"> Business </span> -->
-                <span class="txt-type underline" data-wait="3000"><span class="txt">Business</span></span>
+                <span class="txt-type underline block" data-wait="3000"><span class="txt animate-typewriter underline">Business</span></span>
               </h1>
     <!-- </h1> -->
 
@@ -92,7 +112,7 @@
 
 </section>
 <section class="pt-14 sm:pt-20 lg:pt-130 xl:pt-230 bg-slate-950/90">
-      <div class="px-4 xl:container ml-20">
+      <div class="px-4 xl:container ml-15">
         <div class=" relative mx-auto mb-12 max-w-[620px] pt-6 text-center md:mb-20 lg:pt-16 xl:10">
           <span class="text-gray-700 opacity-20 text-[100px] absolute z-10 -top-6 left-10 bottom-15 left-1/2 font-bold"> FEATURES </span>
           <h2 class="mb-5 text-3xl font-semibold sm:text-4xl md:text-[50px] md:leading-[60px]">
@@ -142,10 +162,7 @@
           <div class="w-full px-4 md:w-1/2 lg:w-1/3">
             <div class="mx-auto mb-10 max-w-[380px] text-center md:mb-16">
               <div class="mx-auto mb-6 flex h-[70px] w-[70px] items-center justify-center rounded-full bg-white/5 hover:bg-blue-600 md:mb-9 md:h-[90px] md:w-[90px]">
-                <!-- <svg width="44" height="44" viewBox="0 0 44 44" class="fill-current">
-                  <path d="M36.6667 40.3334H7.33333C6.8471 40.3334 6.38079 40.1402 6.03697 39.7964C5.69315 39.4526 5.5 38.9863 5.5 38.5V14.6667H38.5V38.5C38.5 38.9863 38.3068 39.4526 37.963 39.7964C37.6192 40.1402 37.1529 40.3334 36.6667 40.3334ZM12.8333 20.1667V27.5H20.1667V20.1667H12.8333ZM12.8333 31.1667V34.8334H31.1667V31.1667H12.8333ZM23.8333 22V25.6667H31.1667V22H23.8333Z"></path>
-                  <path opacity="0.5" d="M38.5 11H5.5V5.49996C5.5 5.01373 5.69315 4.54741 6.03697 4.2036C6.38079 3.85978 6.8471 3.66663 7.33333 3.66663H36.6667C37.1529 3.66663 37.6192 3.85978 37.963 4.2036C38.3068 4.54741 38.5 5.01373 38.5 5.49996V11Z"></path>
-                </svg> -->
+                <img src="/image/doll.png" class="w-8">
               </div>
               <div>
                 <h3 class="text-dark mb-3 text-xl font-medium sm:text-2xl md:mb-5">
@@ -177,7 +194,7 @@
           <div class="w-full px-4 md:w-1/2 lg:w-1/3">
             <div class="mx-auto mb-10 max-w-[380px] text-center md:mb-16">
               <div class="mx-auto mb-6 flex h-[70px] w-[70px] items-center justify-center rounded-full bg-white/5 hover:bg-blue-500 md:mb-9 md:h-[90px] md:w-[90px] ">
-                <img src=""class="rounded-full bg-gray-700">
+                <img src="/image/house.webp"class="rounded-full bg-gray-700 w-10">
               </div>
               <div>
                 <h3 class="text-dark mb-3 text-xl font-medium sm:text-2xl md:mb-5">
@@ -210,7 +227,7 @@
       </div>
     </section>
     <section id="about" class="pt-14 sm:pt-20 lg:pt-[130px]">
-      <div class="px-4 xl:container ml-20">
+      <div class="px-4 xl:container ml-15">
         <div class="relative mx-auto mb-12 pt-6 text-center lg:mb-20 lg:pt-16" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s;">
           <span class="text-gray-700 opacity-20 text-[100px] absolute z-10 -top-6 right-30 bottom-15 right-1/3 font-bold"> ABOUT US </span>
           <h2 class="mx-auto mb-5 max-w-[570px] text-3xl font-bold sm:text-4xl md:text-[50px] md:leading-[60px]">
@@ -285,7 +302,7 @@
       </div>
     </section>
 <section id="team" class="pt-14 sm:pt-20 lg:pt-[130px]">
-      <div class="px-4 xl:container ml-20">
+      <div class="px-4 xl:container ml-15">
         
         <div class="relative mx-auto mb-12 pt-6 text-center md:mb-20 lg:pt-16">
           <span class="text-gray-700 opacity-20 text-[100px] absolute z-10 -top-6 right-25 bottom-15 right-1/3 font-bold"> OUR TEAM </span>
@@ -354,7 +371,7 @@
       </div>
     </section>
     <section id="portfolio" class="pt-14 sm:pt-20 lg:pt-[130px]">
-      <div class="px-4 xl:container ml-20">
+      <div class="px-4 xl:container ml-15">
       
         <div class="relative mx-auto mb-12 pt-6 text-center md:mb-20 lg:pt-16">
           <span class="text-gray-700 opacity-20 text-[90px] absolute z-10 -top-6 right-30 bottom-15 right-1/3 font-bold"> PORTFOLIO </span>
@@ -384,21 +401,21 @@
             </button>
           </div>
 
-          <div class="flex  -mx-50">
+          <div class="flex">
             <div class="flex flex-col ">
-                <div class="relative mb-10 overflow-hidden px-4   left-0 top-0">
+                <div class="relative mb-10 overflow-hidden px-2 left-0 top-0">
                   <img src="/image/image-8.jpg" alt="portfolio-image" class="w-full rounded-lg ">
                 </div>
                 <div class="flex ">
-                <div class="mb-10 overflow-hidden px-4  lg:w-1/2">
+                <div class="mb-10 overflow-hidden px-2 lg:w-1/2">
                   <img src="/image/image-10.jpg" alt="portfolio-image" class="w-full rounded-lg ">
                 </div>
-                <div class="mb-10 overflow-hidden px-4 md:w-1/2 lg:w-1/2">
+                <div class="mb-10 overflow-hidden px-2 md:w-1/2 lg:w-1/2">
                   <img src="image/image-11.jpg" alt="portfolio-image" class="w-full rounded-lg ">
                 </div>
                 </div>
             </div>
-              <div class="mb-10 overflow-hidden px-4 md:w-1/2 lg:w-2/5">
+              <div class="mb-10 overflow-hidden px-2 md:w-1/2 lg:w-1/3">
                 <img src="/image/image-9.jpg" alt="portfolio-image" class="w-full rounded-lg ">
               </div>
           </div>
@@ -410,14 +427,14 @@
               </a>
           </div>
     </section>
-    <section class="pt-14 sm:pt-20 lg:pt-[130px]">
+    <section class="pt-14 sm:pt-20 lg:pt-[90px]">
       <div class="px-4 xl:container ml-20">
         <div class="relative mx-auto mb-12 pt-6 text-center md:mb-20 lg:pt-16">
           <span class="text-gray-700 opacity-20 text-[90px] absolute z-10 -top-6 right-30 bottom-15 right-1/3 font-bold"> Testimonial </span>
           <h2 class="mx-auto mb-5 max-w-[450px] text-3xl font-bold sm:text-4xl md:text-[50px] md:leading-[60px]">
             What Our Clients Say About Us
           </h2>
-          <p class="text-gray-400 mx-auto max-w-[620px] text-base">
+          <p class="text-gray-400 mx-auto max-w-[520px] text-base">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
             convallis tortor eros.<br> Donec vitae tortor lacus. Phasellus aliquam
             ante in maximus.
@@ -442,7 +459,7 @@
                     </div>
                   </div>
                   <div class="w-full px-4 lg:w-1/2">
-                    <div class="relative mx-auto mb-9 h-[420px] w-full max-w-[420px] lg:mr-0 lg:mb-0">
+                    <div class="relative mx-auto mb-9 h-[320px] w-full max-w-[420px] lg:mr-0 lg:mb-0">
                       <div class="absolute top-5 right-5 z-10">
                         <img src="/image/image12.jpg" alt="testimonial-image">
                         <div class="border-primary/10 bg-primary/5 dark:border-opacity-10 absolute -top-5 -right-5 -z-10 h-full w-full border backdrop-blur-[6px] dark:border-white/10 dark:bg-white/10"></div>
@@ -720,9 +737,10 @@
                   <a class="block">
                     <img src="/image/image-13.jpg" alt="blog-image" class="w-full">
                   </a>
-                  <span class="font-bold absolute top-5 left-5 rounded-sm px-4 py-[6px] text-sm bg-blue-600 text-white">
-                    Online Business
-                  </span>
+<span class="absolute top-5 left-5 rounded-sm px-4 py-[6px] text-sm font-bold bg-blue-600 text-white overflow-hidden  ">
+  Online Business
+</span>
+
                 </div>
                 <div>
                   <div class="mb-4 flex items-center">
