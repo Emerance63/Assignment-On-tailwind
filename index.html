@@ -6,282 +6,293 @@
     <title>Tailwind</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-900 text-white overflow-x-hidden max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<body class="bg-gray-900 text-white mx-auto px-4 md:px-6 lg:px-8 flot-x-hidden">
 <header>
-<div class=" flex justify-between items-center px-10 py-5  text-gray-500 mt-5 ml-20 font-sans fixed top-0 right-0 left-0">
-    <div flex items-center gap-2 text-xl font-bold >
-        <img src="/image/logo-dark.svg"alt="log">
+<div class=" flex justify-between items-center px-10 py-5  text-gray-500 mt-5 ml-20 fixed top-0 right-0 left-0 lg:flex-nowrap justify-between items-center px-5 lg:px-10 py-5 text-gray-500 mt-5 ml-0 lg:ml-20 fixed top-0 right-0 left-0 z-50">
+   <header class="fixed top-0 left-0 right-0 z-50 bg-gray-900/90 backdrop-blur-md">
+  <div class="flex items-center justify-between px-4 sm:px-6 lg:px-10 py-4">
+
+    <!-- LOGO -->
+    <div class="flex items-center gap-2 text-xl font-bold">
+      <img src="/image/logo-dark.svg" alt="logo" class="h-8">
     </div>
-    <div>
-        <ul class="d-none flex gap-10 mr-20">
-        <li><a class="text-blue-500 hover:text-white">Home</a></li>
-        <li><a class="hover:text-white">Features</a></li>
-        <li><a>
-        <div class="relative group">
-        <button class="text-white">Pages ▾</button>
-        <div class="absolute hidden group-hover:block bg-gray-800 rounded-lg mt-2 w-48 shadow-lg">
-        <a href="#" class="block px-4 py-2 hover:bg-gray-700">Blog Grids</a>
-        <a href="#" class="block px-4 py-2 hover:bg-gray-700">Blog Details</a>
-        <a href="#" class="block px-4 py-2 hover:bg-gray-700">404 Error</a>
-        <a href="#" class="block px-4 py-2 hover:bg-gray-700">Sign In</a>
-        <a href="#" class="block px-4 py-2 hover:bg-gray-700">Sign Up</a>
-        </div>
-        </div>
-        </a></li>
-        <li><a class="hover:text-white">Support</a></li>
-        </ul>
+
+    <!-- DESKTOP MENU -->
+    <ul class="hidden lg:flex items-center gap-8 text-gray-300">
+      <li><a class="text-blue-500 hover:text-white transition">Home</a></li>
+      <li><a class="hover:text-white transition">Features</a></li>
+      <li>
+        <button class="hover:text-white transition">Pages ▾</button>
+      </li>
+      <li><a class="hover:text-white transition">Support</a></li>
+    </ul>
+
+    <!-- DESKTOP BUTTONS -->
+    <div class="hidden lg:flex items-center gap-4">
+      <button class="bg-blue-600 hover:bg-blue-700 transition px-6 py-2 rounded-md text-white">
+        Sign In
+      </button>
+      <button class="bg-gray-800 hover:bg-gray-700 transition px-6 py-2 rounded-md text-white">
+        Sign Up
+      </button>
     </div>
-    <div>
-    <div class="flex items-center gap-4 mr-20 text-white">
-        <button class="bg-blue-600 px-7 py-3 rounded-md">Sign In</button>
-        <button class="bg-gray-800 px-7 py-3 rounded-md">Sign Up</button>
+
+    <!-- MOBILE MENU BUTTON -->
+    <button id="menu-btn" class="lg:hidden text-white text-2xl">
+      ☰
+    </button>
+
+  </div>
+
+  <!-- MOBILE MENU -->
+  <div id="mobile-menu" class="hidden lg:hidden px-6 pb-6">
+    <ul class="flex flex-col gap-4 text-gray-300">
+      <li><a class="text-blue-500">Home</a></li>
+      <li><a>Features</a></li>
+      <li><a>Pages</a></li>
+      <li><a>Support</a></li>
+    </ul>
+
+    <div class="flex flex-col gap-3 mt-6">
+      <button class="bg-blue-600 px-6 py-2 rounded-md text-white">
+        Sign In
+      </button>
+      <button class="bg-gray-800 px-6 py-2 rounded-md text-white">
+        Sign Up
+      </button>
     </div>
-    </div>
+  </div>
+</header>
             
     </div>
+<section class="px-4 sm:px-6 lg:px-10 py-16 grid md:grid-cols-2 gap-10 items-center mt-20 font-bold">
 
-<section class=" px-10 py-16 grid md:grid-cols-2 gap-10 items-center mt-20 font-bold ">
-
-<div class="font-sans">
-    <div class="inline-flex items-center gap-3 bg-gray-800 px-4 py-2 rounded-full mb-10 ">
-      <span class="w-2 h-2 m-3 bg-blue-500 rounded-full"></span>
-      Tailwind Template for Startups
+  <!-- LEFT CONTENT -->
+  <div class="font-sans text-center md:text-left">
+    
+    <div class="inline-flex items-center gap-3 bg-gray-800 px-4 py-2 rounded-full mb-6 md:mb-10">
+      <span class="w-2 h-2 bg-blue-500 rounded-full"></span>
+      <span class="text-sm sm:text-base">Tailwind Template for Startups</span>
     </div>
 
-    <!-- Heading -->
-    <!-- <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-relaxed">
-      Digital Solutions for <br> -->
-      <h1 class="mb-5 text-2xl font-bold sm:text-4xl md:text-[50px] md:leading-[60px]">
-                Digital Solutions for Your
-                <!-- <span class="underline"> Business </span> -->
-                <span class=" underline block" data-wait="3000"><span class="txt animate-typewriter underline">Business</span></span>
-              </h1>
-    <!-- </h1> -->
+    <h1 class="mb-5 text-2xl sm:text-4xl md:text-5xl md:leading-[60px] font-bold">
+      Digital Solutions for Your
+      <span class="underline decoration-blue-500">Business</span>
+    </h1>
 
-    <!-- Paragraph -->
-    <p class="text-gray-500 mb-8 max-w-lg text-lg ">
-     Handcrafted Tailwind CSS template for your next - Startup, Business,
-      Agency or SaaS Website. Comes with refreshing design and 
-       everything you need to kickstart your next web project.
+    <p class="text-gray-400 mb-8 max-w-lg mx-auto md:mx-0 text-base sm:text-lg">
+      Handcrafted Tailwind CSS template for your next Startup, Business,
+      Agency or SaaS Website. Comes with refreshing design and everything you need.
     </p>
 
-    <!-- Buttons -->
-    <div class="flex items-center gap-6">
-      <button class="bg-blue-600 px-6 py-3 rounded-lg flex items-center gap-2">
+    <div class="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 sm:gap-6">
+      
+      <button class="bg-blue-600 hover:bg-blue-700 transition px-6 py-3 rounded-lg flex items-center gap-2 text-white">
         Get Started →
       </button>
 
-      <button class="flex items-center gap-2 text-gray-300">
-        <span>▶</span> How it Work
+      <button class="flex items-center gap-2 text-gray-300 hover:text-white ">
+        <span>▶</span> How it Works
+      </button>
+
+    </div>
+  </div>
+
+  <!-- RIGHT IMAGES -->
+  <div class="relative flex justify-center items-center mt-10 md:mt-0">
+
+    <!-- Background Image -->
+    <img src="/image/image-1.jpg"
+         class="w-40 sm:w-56 md:w-72 lg:w-80 rounded-lg absolute top-0 right-0 opacity-70">
+
+    <!-- Main Image -->
+    <img src="/image/image-2.jpg"
+         class="w-48 sm:w-64 md:w-64 lg:w-60 rounded-xl shadow-2xl top-20 relative z-10">
+
+    
+    <!-- <img src="/image/download (1).svg"
+         class="absolute -top-10 left-0 w-24 sm:w-32 md:w-36 opacity-90"> -->
+
+  </div>
+
+</section>
+
+<section class="pt-14 sm:pt-20 lg:pt-28 bg-slate-950/90">
+
+  <div class="px-4 sm:px-6 lg:px-10 max-w-7xl mx-auto">
+
+    <!-- HEADER -->
+    <div class="relative z-0 mx-auto mb-12 max-w-2xl text-center md:mb-20">
+      
+      <span class="absolute inset-0 bottom-20 text-gray-500 flex items-center justify-center text-[60px] sm:text-[90px] font-bold text-gray-600 opacity-20">
+        FEATURES
+      </span>
+
+      <h2 class="relative z-0 top-10 mb-5 text-3xl sm:text-4xl md:text-5xl font-semibold">
+        Our Unique & Awesome Core Features
+      </h2>
+
+      <p class="relative z-0 text-gray-400 text-base top-10 sm:text-lg">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
+        convallis tortor eros. Donec vitae tortor lacus.
+      </p>
+
+    </div>
+
+    <!-- FEATURES GRID -->
+    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+
+      <!-- ITEM -->
+      <div class="text-center p-6 rounded-xl">
+        <div class="mx-auto mb-6 flex h-16 w-16 sm:h-20 sm:w-20 items-center justify-center rounded-full bg-white/10 hover:bg-blue-600">
+          <img src="/image/dashbourd-removebg-preview.png" class="h-10 w-10">
+        </div>
+        <h3 class="mb-3 text-xl sm:text-2xl font-medium">Crafted for Startups</h3>
+        <p class="text-gray-400 text-sm sm:text-base">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+      </div>
+
+      <!-- ITEM -->
+      <div class="text-center p-6 rounded-xl">
+        <div class="mx-auto mb-6 flex h-16 w-16 sm:h-20 sm:w-20 items-center justify-center rounded-full bg-white/10 hover:bg-blue-600">
+          <img src="/image/buffer (1).png" class="h-10 w-10">
+        </div>
+        <h3 class="mb-3 text-xl sm:text-2xl font-medium">High-quality Design</h3>
+        <p class="text-gray-400 text-sm sm:text-base">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+      </div>
+
+      <!-- ITEM -->
+      <div class="text-center p-6 rounded-xl">
+        <div class="mx-auto mb-6 flex h-16 w-16 sm:h-20 sm:w-20 items-center justify-center rounded-full bg-white/10 hover:bg-blue-600">
+          <img src="/image/doll.png" class="h-10 w-10 ">
+        </div>
+        <h3 class="mb-3 text-xl sm:text-2xl font-medium">All Essential Sections</h3>
+        <p class="text-gray-400 text-sm sm:text-base">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+      </div>
+
+      <!-- ITEM -->
+      <div class="text-center p-6 rounded-xl">
+        <div class="mx-auto mb-6 flex h-16 w-16 sm:h-20 sm:w-20 items-center justify-center rounded-full bg-white/10 hover:bg-blue-600">
+          <img src="/image/clock-removebg-preview.png" class="h-14 w-14">
+        </div>
+        <h3 class="mb-3 text-xl sm:text-2xl font-medium">Speed Optimized</h3>
+        <p class="text-gray-400 text-sm sm:text-base">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+      </div>
+
+      <!-- ITEM -->
+      <div class="text-center p-6 rounded-xl ">
+        <div class="mx-auto mb-6 flex h-16 w-16 sm:h-20 sm:w-20 items-center justify-center rounded-full bg-white/10 hover:bg-blue-600">
+          <img src="/image/house.webp" class="h-10 w-10">
+        </div>
+        <h3 class="mb-3 text-xl sm:text-2xl font-medium">Fully Customizable</h3>
+        <p class="text-gray-400 text-sm sm:text-base">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+      </div>
+
+      <!-- ITEM -->
+      <div class="text-center p-6 rounded-xl">
+        <div class="mx-auto mb-6 flex h-16 w-16 sm:h-20 sm:w-20 items-center justify-center rounded-full bg-white/10 hover:bg-blue-600">
+          <img src="/image/reset-removebg-preview.png" class="h-10 w-10">
+        </div>
+        <h3 class="mb-3 text-xl sm:text-2xl font-medium">Regular Updates</h3>
+        <p class="text-gray-400 text-sm sm:text-base">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+<section class="pt-14 md:pt-20 lg:pt-28">
+
+  <div class="px-4 sm:px-6 lg:px-10 max-w-7xl mx-auto">
+
+    <!-- HEADER -->
+    <div class="relative mx-auto mb-12 text-center max-w-2xl">
+
+      <span class="absolute inset-0 z-10 bottom-20 flex items-center justify-center text-[60px] sm:text-[90px] font-bold text-gray-600 opacity-10">
+        ABOUT Us
+      </span>
+
+      <h2 class="relative z-0  top-10 mb-5 text-3xl sm:text-4xl md:text-5xl font-bold">
+        Know Details About Our Company
+      </h2>
+
+      <p class=" relative z-0  top-10 text-gray-400 text-base sm:text-lg">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros.
+      </p>
+
+    </div>
+
+    <!-- TABS -->
+    <div class="flex flex-col gap-5 sm:flex-row justify-center gap-4 border-b border-gray-700 mb-12 text-center">
+      <button class="pb-4 border-b-2 border-blue-500 text-white font-medium">
+        About Us
+      </button>
+      <button class="pb-4 text-gray-400 hover:text-white transition">
+        Our Mission
+      </button>
+      <button class="pb-4 text-gray-400 hover:text-white transition">
+        Our Vision
       </button>
     </div>
 
-    </div>
-    <div class="relative flex justify-center mt-20" md:w-40 lg:w->
-      
- <img src="/image/download (1).svg"
-         class="flex items- justify-center -mt-60 relative z-10 ">
-    <img src="/image/image-1.jpg"
-         class="w-85 h-70 object-cover rounded-lg absolute top-0 right-15 z-0 opacity-80">
+    <!-- CONTENT -->
+    <div class="grid gap-10 lg:grid-cols-2 items-center">
 
-     <img src="/image/image-2.jpg"
-         class="w-90 h-90 object-cover rounded-lg relative z-10 right-80 shadow-lg mt-40 mr-60 ">
+      <!-- IMAGES -->
+      <div class="relative z-0 right-20 flex justify-center">
+
+        <!-- main image -->
+        <img src="/image/image-3.jpg"
+             class="w-64 sm:w-80 md:w-96 rounded-xl shadow-xl">
+
+        <!-- overlay image -->
+        <img src="/image/image-4.jpg"
+             class="w-40 sm:w-52 md:w-80 rounded-xl shadow-lg absolute z-10 top-20 right-10">
+
+        <!-- decorative
+        <img src="/image/download.svg"
+             class="absolute -top-6 left-0 w-16 sm:w-20 opacity-80"> -->
+
+      </div>
+
+      <!-- TEXT -->
+      <div class="text-center lg:text-left">
+
+        <h3 class="mb-6 text-2xl sm:text-3xl md:text-4xl font-bold">
+          We are Creative Digital Agency Based in USA
+        </h3>
+
+        <p class="text-gray-400 mb-5 text-base sm:text-lg">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce condimentum sapien ac leo cursus dignissim.
+        </p>
+
+        <p class="text-gray-400 mb-5 text-base sm:text-lg">
+          Phasellus ex massa, facilisis ac vestibulum eget, ultrices quis nulla. Integer vitae magna lacus.
+        </p>
+
+        <p class="text-gray-400 text-base sm:text-lg">
+          Sed venenatis auctor dolor. Phasellus ex massa, facilisis ac vestibulum eget.
+        </p>
+
+      </div>
+
     </div>
 
   </div>
 
 </section>
-<section class="pt-14 sm:pt-20 lg:pt-130 xl:pt-230 bg-slate-950/90">
-      <div class="px-4 xl:container ">
-        <div class=" relative mx-auto mb-12 max-w-[620px] pt-6 text-center md:mb-20 lg:pt-16 xl:10">
-          <span class="text-gray-700 opacity-20 text-[100px] absolute z-10 -top-6 left-10 bottom-15 left-1/2 font-bold"> FEATURES </span>
-          <h2 class="mb-5 text-3xl font-semibold sm:text-4xl md:text-[50px] md:leading-[60px]">
-            Our Unique & Awesome Core Features
-          </h2>
-          <p class="text-gray-400 ">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-            convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam
-            ante in maximus.
-          </p>
-        </div>
 
-        <div class="-mx-4 flex flex-wrap justify-center">
-          <div class="w-full px-4 md:w-1/2 lg:w-1/3">
-            <div class="mx-auto mb-10 max-w-[380px] text-center md:mb-16">
-              <div class="mx-auto mb-6 flex h-[70px] w-[70px] items-center justify-center hover:bg-blue-600 bg-white/5 text-white rounded-full md:mb-9 md:h-[90px] md:w-[90px]">
-               <img src="/image/dashbourd-removebg-preview.png">
-              </div>
-              <div>
-                <h3 class="mb-3 text-xl font-medium sm:text-2xl md:mb-5">
-                  Crafted for Startups
-                </h3>
-                <p class="text-gray-500 text-lg">
-                  Lorem ipsum dolor sit amet, consectetur<br> adipiscing elit. In
-                  convallis tortor.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="w-full px-4 md:w-1/2 lg:w-1/3">
-            <div class=" mx-auto mb-10 max-w-[380px] text-center md:mb-16">
-              <div class="mx-auto mb-6 flex items-center justify-center rounded-full hover:bg-blue-600 bg-white/5 md:mb-9 md:h-[90px] md:w-[90px]">
-                 <img src="/image/buffer (1).png"class="h-10 w-10">
-                
-              </div>
-              <div>
-                <h3 class="mb-3 text-xl font-medium sm:text-2xl md:mb-5">
-                  High-quality Design
-                </h3>
-                <p class="text-gray-500 text-lg">
-                  Lorem ipsum dolor sit amet, consectetur<br>adipiscing elit. In
-                  convallis tortor.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="w-full px-4 md:w-1/2 lg:w-1/3">
-            <div class="mx-auto mb-10 max-w-[380px] text-center md:mb-16">
-              <div class="mx-auto mb-6 flex h-[70px] w-[70px] items-center justify-center rounded-full bg-white/5 hover:bg-blue-600 md:mb-9 md:h-[90px] md:w-[90px]">
-                <img src="/image/doll.png" class="w-8">
-              </div>
-              <div>
-                <h3 class="text-dark mb-3 text-xl font-medium sm:text-2xl md:mb-5">
-                  All Essential Sections
-                </h3>
-                <p class="text-gray-500 text-lg">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-                  convallis tortor.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="w-full px-4 md:w-1/2 lg:w-1/3">
-            <div class="mx-auto mb-10 max-w-[380px] text-center md:mb-16">
-              <div class="mx-auto mb-6 flex h-[70px] w-[70px] items-center justify-center rounded-full bg-white/5 hover:bg-blue-500 md:mb-9 md:h-[90px] md:w-[90px]">
-                <img src="/image/clock-removebg-preview.png"class="mt-5">
-              </div>
-              <div>
-                <h3 class="text-dark mb-3 text-xl font-medium sm:text-2xl md:mb-5">
-                  Speed Optimized
-                </h3>
-                <p class="text-gray-500 text-lg">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-                  convallis tortor.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="w-full px-4 md:w-1/2 lg:w-1/3">
-            <div class="mx-auto mb-10 max-w-[380px] text-center md:mb-16">
-              <div class="mx-auto mb-6 flex h-[70px] w-[70px] items-center justify-center rounded-full bg-white/5 hover:bg-blue-500 md:mb-9 md:h-[90px] md:w-[90px] ">
-                <img src="/image/house.webp"class="rounded-full bg-gray-700 w-10">
-              </div>
-              <div>
-                <h3 class="text-dark mb-3 text-xl font-medium sm:text-2xl md:mb-5">
-                  Fully Customizable
-                </h3>
-                <p class="text-gray-500 text-lg">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-                  convallis tortor.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="w-full px-4 md:w-1/2 lg:w-1/3">
-            <div class="mx-auto max-w-[380px] text-center md:mb-16">
-              <div class="mx-auto mb-6 flex h-[70px] w-[70px] items-center justify-center rounded-full hover:bg-blue-500 md:mb-9 md:h-[90px] md:w-[90px] bg-white/5">
-                <img src="/image/reset-removebg-preview.png"class="h-10 w-10">
-              </div>
-              <div>
-                <h3 class="text-dark mb-3 text-xl font-medium sm:text-2xl md:mb-5">
-                  Regular Updates
-                </h3>
-                <p class="text-gray-500 text-lg">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-                  convallis tortor.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="about" class="pt-14 sm:pt-20 lg:pt-[130px]">
-      <div class="px-4 xl:container">
-        <div class="relative mx-auto mb-12 pt-6 text-center lg:mb-20 lg:pt-16" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s;">
-          <span class="text-gray-700 opacity-20 text-[100px] absolute z-10 -top-6 right-30 bottom-15 right-1/3 font-bold"> ABOUT US </span>
-          <h2 class="mx-auto mb-5 max-w-[570px] text-3xl font-bold sm:text-4xl md:text-[50px] md:leading-[60px]">
-            Know Details About<br> Our Company
-          </h2>
-          <p class="text-gray-400">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-            convallis tortor<br> eros. Donec vitae tortor lacus. Phasellus aliquam
-            ante in maximus.
-          </p>
-        </div>
-
-        <div class="relative z-10 overflow-hidden rounded-sm px-8 pt-0 pb-8 md:px-[70px] md:pb-[70px] lg:px-[60px] lg:pb-[60px] xl:px-[70px] xl:pb-[70px]">
-          <div class="bg-noise-pattern absolute top-0 left-0 -z-10 h-full w-full bg-cover bg-center"></div>
-          <div class="absolute bottom-0 left-1/2 -z-10 -translate-x-1/2">
-           
-          </div>
-          <div class="flex w-full items-center justify-around">
-            <button class=" w-full border-b hover:border-blue px-2 pt-8 pb-6 text-base font-medium lg:pt-9 lg:pb-7">
-              About Us
-            </button>
-            <button class=" w-full border-b px-2 pt-8 pb-6 text-base font-medium lg:pt-9 lg:pb-7">
-              Our Mission
-            </button>
-            <button class="w-full border-b px-2 pt-8 pb-6 text-base font-medium lg:pt-9 lg:pb-7">
-              Our Vision
-            </button>
-          </div>
-          <div class="w-full">
-            <div class="flex">
-              <div class="-mx-4 flex w-full flex-wrap items-center pt-[70px]">
-                <div class="w-full px-4 lg:w-1/2">
-                  <div class="relative z-30 mb-14 h-[490px] max-w-[600px] lg:mb-0">
-                    <div class="absolute top-0 left-0">
-                      <img src="/image/image-3.jpg" alt="about-image">
-                    </div>
-                    <div class="absolute top-1/2 right-0 z-10 -translate-y-1/2">
-                      <img src="/image/image-4.jpg" alt="about-image">
-                      <div class="absolute -top-5 -left-5 -z-10 h-full w-full"></div>
-                    </div>
-                    <div class="absolute top-24 right-0 z-40">
-                      <img src="/image/download.svg">
-                    </div>
-                  </div>
-                </div>
-                <div class="w-full mt-10 px-4 lg:w-1/2">
-                  <div class="max-w-[565px] lg:ml-auto">
-                    <h2 class="mb-8 text-2xl font-bold sm:text-[40px] sm:leading-[50px]">
-                      We are Creative Digital Agency Based in USA
-                    </h2>
-                    <p class="text-gray-500 mb-6 text-lg">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Fusce condimentum sapien ac leo cursus dignissim. In ac
-                      lectus vel orci accumsan ultricies at in libero accumsan.
-                    </p>
-                    <p class="text-gray-500 mb-6 text-lg">
-                      Phasellus ex massa, facilisis ac vestibulum eget, ultrices
-                      quis nulla. Integer vitae magna lacus. Sed venenatis
-                      auctor dolor.
-                    </p>
-                    <p class="text-gray-500 mb-6 text-lg">
-                      Phasellus ex massa, facilisis ac vestibulum eget, ultrices
-                      quis nulla. Integer vitae magna lacus. Sed venenatis
-                      auctor dolor.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-<section id="team" class="pt-14 sm:pt-20 lg:pt-[130px]">
+<section class="pt-14 sm:pt-20 lg:pt-[130px]">
       <div class="px-4 xl:container">
         
         <div class="relative mx-auto mb-12 pt-6 text-center md:mb-20 lg:pt-16">
@@ -301,8 +312,6 @@
             <div class="xs:max-w-[370px] group mx-auto mb-10 max-w-[300px]">
               <div class="relative mb-8 overflow-hidden rounded-sm">
                 <img src="/image/image-5.jpg" alt="team-image" class="w-full">
-                <div class="absolute bottom-6 left-1/2 -translate-x-1/2 translate-y-10 opacity-0 transition duration-300 group-hover:translate-y-0 group-hover:opacity-100">
-                </div>
               </div>
               <div>
                 <h3 class="mb-1 text-xl font-medium sm:text-2xl ">
@@ -335,7 +344,6 @@
             <div class="xs:max-w-[370px] group mx-auto mb-10 max-w-[300px] text-center">
               <div class="relative mb-8 overflow-hidden rounded-sm">
                 <img src="/image/image-7.jpg" alt="team-image" class="w-full">
-                
               </div>
               <div>
                 <h3 class="font-heading text-dark mb-1 text-xl font-medium sm:text-2xl dark:text-white">
@@ -367,36 +375,36 @@
 
         <div>
           <div class=" mb-16 flex items-center justify-center overflow-x-auto pb-2">
-            <button class="text-white px-5 text-lg whitespace-nowrap">
+            <button class="text-white px-5 text-lg whitespace-nowrap lg:flex items-center gap-4 mr-20 text-white">
               All
             </button>
-            <button class="text-white px-5 text-lg whitespace-nowrap">
+            <button class="text-white px-5 text-lg whitespace-nowrap lg:flex items-center gap-4 mr-20 text-white">
               Branding Strategy
             </button>
-            <button class="text-lg px-5 text-white whitespace-nowrap">
+            <button class="text-lg px-5 text-white whitespace-nowrap lg:flex items-center gap-4 mr-20 text-white">
               Digital Experiences
             </button>
-            <button class="text-lg px-5 text-white whitespace-nowrap">
+            <button class="text-lg px-5 text-white whitespace-nowrap lg:flex items-center gap-4 mr-20 text-white">
               eCommerce
             </button>
           </div>
 
-          <div class="flex ml-3">
+          <div class="flex ml-3 md:">
             <div class="flex flex-col ">
                 <div class="relative mb-10 overflow-hidden px-2 left-0 top-0">
                   <img src="/image/image-8.jpg" alt="portfolio-image" class="w-full rounded-lg ">
                 </div>
                 <div class="flex ">
                 <div class="mb-10 overflow-hidden px-2 lg:w-1/2">
-                  <img src="/image/image-10.jpg" alt="portfolio-image" class="w-fullrounded-lg ">
+                  <img src="/image/image-10.jpg" alt="portfolio-image" class="w-full rounded-lg ">
                 </div>
                 <div class="mb-10 overflow-hidden px-2 md:w-1/2 lg:w-1/2">
                   <img src="image/image-11.jpg" alt="portfolio-image" class="w-full rounded-lg ">
                 </div>
                 </div>
             </div>
-              <div class="mb-10 overflow-hidden px-2 md:w-1/2 lg:w-1/3">
-                <img src="/image/image-9.jpg" alt="portfolio-image" class="w-rounded-lg ">
+              <div class="mb-10 overflow-hidden px-2 md:w-1/2 lg:w-2/6">
+                <img src="/image/image-9.jpg" alt="portfolio-image" class="w-full rounded-lg ">
               </div>
           </div>
           <div class="flex items-center justify-center">
@@ -457,9 +465,9 @@
           <h2 class="font-bold mb-5 text-[28px] leading-tight ">
             Trusted by Global Brands
           </h2>
-          <p class="text-gray-400 text-base max-w-[220px]">
-            Lorem ipsum dolor sit amet, consectetur<br> adipiscing elit. In
-            convallis tortor <br> eros.Donec vitae <br>tortor lacus Phasellus aliquam
+          <p class="text-gray-400 text-base max-w-[520px]">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
+            convallis tortor <br> eros.Donec vitae tortor lacus Phasellus aliquam
             ante in maximus.
           </p>
         </div>
@@ -487,214 +495,109 @@
           </div>
         </div>
       </div>
-    </section>
-    <section class="pt-14 sm:pt-20 lg:pt-[130px]">
-      <div class="px-4 xl:container ml-20">
-        
-        <div class="mb-12 w-full pt-10 text-center relative z-0 md:mb-20 lg:pt-12">
-          <span class="text-gray-700 opacity-20 text-[80px] absolute z-10 -top-6 right-30 bottom-15 right-1/4 font-bold"> PRICING PLANS </span>
-          <h2 class="mx-auto mb-5 max-w-[600px] text-3xl font-bold sm:text-4xl md:text-[50px] md:leading-[60px]">
-            Affordable Pricing With Simple Plans
-          </h2>
-          <p class="text-gray-400 mx-auto max-w-[600px] text-base">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-            convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam
-            ante in maximus.
-          </p>
-        </div>
-        <div class="flex">
-          <div class="w-full sm:w-1/2 lg:w-1/3">
-            <div class="pt-10 pb-20 text-center">
-              <div class="border-b border-gray-700">
-                <h3 class="mb-2 text-3xl font-bold text-white">
-                  Free
-                </h3>
-                <p class="text-gray-400 pb-10 text-base">
-                  The most basic plan
-                </p>
-              </div>
-              <div class="border-b py-10 border-gray-700">
-                <h3 class="mb-6 flex items-end justify-center pt-2 text-base font-bold text-white">
-                  $ <sup class="-mb-2 text-[55px]"> 0 </sup>
-                  /month
-                </h3>
+   <section class="pt-16 sm:pt-20 lg:pt-[130px] bg-slate-950">
+  <div class="px-4 mx-auto max-w-7xl">
 
-                <p class="text-gray-400 mx-auto max-w-[300px] text-base">
-                  Lorem ipsum dolor sit ametion consectetur adipisc elit.
-                </p>
-              </div>
-              <div class="space-y-4 px-6 pt-10 pb-[60px] text-left sm:px-10 md:px-8 lg:px-10 xl:px-20">
-                <p class="text-gray-400 flex items-center text-base">
-                  <span class="inline-block pr-2 ">
-                    <img src="/image/mark-removebg-preview.png"class="w-5">
-                  </span>
-                  300 GB Storage
-                </p>
-                <p class="text-gray-400 flex items-center text-base">
-                  <span class="inline-block pr-2">
-                   <img src="/image/mark-removebg-preview.png"class="w-5">
-                  </span>
-                  Unlimited Photos and Videos
-                </p>
-                <p class="text-gray-400 flex items-center text-base">
-                  <span class="inline-block pr-2">
-                  <img src="/image/mark-removebg-preview.png"class="w-5">
-                  </span>
-                  Exclusive Support
-                </p>
-                <p class="text-gray-400 flex items-center text-base">
-                  <span class="inline-block pr-2">
-                    <img src="/image/2-removebg-preview.png"class="w-4">
-                  </span>
-                  Custom Branding Strategy
-                </p>
-                <p class="text-gray-400 flex items-center text-base">
-                  <span class="inline-block pr-2">
-                    <img src="/image/2-removebg-preview.png"class="w-4">
-                    </span>
-                  Free SEO Tools
-                </p>
-              </div>
-              <a  class="bg-gray-500/90 font-bold inline-flex items-center rounded-sm px-8 py-[14px] text-base text-white">
-                Join This Plan
-                <span class="pl-3">
-                  <img src="/image/3-removebg-preview.png"class="w-8">
-                </span>
-              </a>
-            </div>
-          </div>
-          <div class="w-full sm:w-1/2 sm:border-l lg:w-1/3 lg:border-x border-gray-700">
-            <div class="pt-10 pb-20 text-center">
-              <div class="border-b border-gray-700">
-                <h3 class="font-bold  mb-2 text-3xl text-white">
-                  Basic
-                </h3>
-                <p class="text-gray-400 pb-10 text-base">
-                  The most popular plan
-                </p>
-              </div>
-              <div class="border-b py-10 border-gray-700">
-                <h3 class="font-bold  mb-6 flex items-end justify-center pt-2 text-base text-white">
-                  $ <sup class="-mb-2 text-[55px]"> 29 </sup>
-                  /month
-                </h3>
+    <!-- Heading -->
+    <div class="mb-16 text-center relative">
+      <span class="hidden sm:block absolute top-15 z-10 text-[80px] md:text-[120px] font-bold text-gray-600 opacity-10">
+        PRICING
+      </span>
 
-                <p class="text-gray-400 mx-auto max-w-[300px] text-base">
-                  Lorem ipsum dolor sit ametion consectetur adipisc elit.
-                </p>
-              </div>
-              <div class="space-y-4 px-6 pt-10 pb-[60px] text-left sm:px-10 md:px-8 lg:px-10 xl:px-20">
-                <p class="text-gray-400 flex items-center text-base">
-                  <span class="inline-block pr-2 text-gray-700">
-                    <img src="/image/mark-removebg-preview.png"class="w-5">
-                  </span>
-                  300 GB Storage
-                </p>
-                <p class="text-gray-400 flex items-center text-base">
-                  <span class="inline-block pr-2 text-gray-700">
-                   <img src="/image/mark-removebg-preview.png"class="w-5">
-                  </span>
-                  Unlimited Photos and Videos
-                </p>
-                <p class="text-gray-400 flex items-center text-base">
-                  <span class="inline-block pr-2 text-gray-700">
-                    <img src="/image/mark-removebg-preview.png"class="w-5">
-                  </span>
-                  Exclusive Support
-                </p>
-                <p class="text-gray-400 flex items-center text-base">
-                  <span class="inline-block pr-2 text-gray-700">
-                    <img src="/image/mark-removebg-preview.png"class="w-5">
-                  </span>
-                  Custom Branding Strategy
-                </p>
-                <p class="text-gray-400 flex items-center text-base">
-                  <span class="inline-block pr-2">
-                    <img src="/image/2-removebg-preview.png"class="w-5">
-                  </span>
-                  Free SEO Tools
-                </p>
-              </div>
-              <a  class="font-bold bg-blue-600 inline-flex items-center rounded-sm px-8 py-[14px] text-base text-white">
-                Join This Plan
-                <span class="pl-3">
-                  <img src="/image/3-removebg-preview.png"class="w-8">
-                </span>
-              </a>
-            </div>
-          </div>
-          <div class="w-full sm:w-1/2 lg:w-1/3">
-            <div class="pt-10 pb-20 text-center">
-              <div class="border-b border-gray-700">
-                <h3 class="font-bold mb-2 text-3xl text-white">
-                  Premium
-                </h3>
-                <p class="text-gray-400 pb-10 text-base">
-                  The most premium plan
-                </p>
-              </div>
-              <div class="border-b py-10 border-gray-700">
-                <h3 class="font-bold mb-6 flex items-end justify-center pt-2 text-base text-white">
-                  $ <sup class="-mb-2 text-[55px]"> 99 </sup>
-                  /month
-                </h3>
+      <h2 class="relative z-0 right-20 text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-5">
+        Affordable Pricing With <br> Simple Plans
+      </h2>
 
-                <p class="text-gray-400 mx-auto max-w-[300px] text-base">
-                  Lorem ipsum dolor sit ametion consectetur adipisc elit.
-                </p>
-              </div>
-              <div class="space-y-4 px-6 pt-10 pb-[60px] text-left sm:px-10 md:px-8 lg:px-10 xl:px-20">
-                <p class="text-gray-400 flex items-center text-base">
-                  <span class="inline-block pr-2 text-gray-700">
-                    <img src="/image/mark-removebg-preview.png"class="w-5">
-                  </span>
-                  300 GB Storage
-                </p>
-                <p class="text-gray-400 flex items-center text-base">
-                  <span class="inline-block pr-2 text-gray-700">
-                    <img src="/image/mark-removebg-preview.png"class="w-5">
-                  </span>
-                  Unlimited Photos and Videos
-                </p>
-                <p class="text-gray-400 flex items-center text-base">
-                  <span class="inline-block pr-2 text-gray-700">
-                    <img src="/image/mark-removebg-preview.png"class="w-5">
-                  </span>
-                  Exclusive Support
-                </p>
-                <p class="text-gray-400 flex items-center text-base">
-                  <span class="inline-block pr-2 text-gray-700">
-                    <img src="/image/mark-removebg-preview.png"class="w-5">
-                  </span>
-                  Custom Branding Strategy
-                </p>
-                <p class="text-gray-400 flex items-center text-base">
-                  <span class="inline-block pr-2 text-gray-700">
-                    <img src="/image/mark-removebg-preview.png"class="w-5">
-                  </span>
-                  Free SEO Tools
-                </p>
-              </div>
-              <a class="bg-gray-500/90 font-bold inline-flex items-center rounded-sm px-8 py-[14px] text-base text-white">
-                Join This Plan
-                <span class="pl-3">
-                  <img src="/image/3-removebg-preview.png"class="w-8">
-                </span>
-              </a>
-            </div>
-          </div>
+      <p class=" relative z-0  top-5 text-gray-400 max-w-xl mx-auto">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros.
+      </p>
+    </div>
+
+    <!-- Pricing Cards -->
+    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+
+      <!-- FREE -->
+      <div class=" boder-b border-gray-800 rounded-2xl p-8 text-center">
+        <h3 class=" boder-b border-gray-800 text-2xl font-bold text-white mb-2">Free</h3>
+        <p class="text-gray-400 mb-6">The most basic plan</p>
+
+        <h3 class="text-white text-4xl font-bold mb-4">$0<span class="text-base font-normal">/month</span></h3>
+
+        <p class="text-gray-400 mb-8">Perfect for beginners</p>
+
+        <div class="space-y-4 text-left mb-10">
+          <p class="flex items-center text-gray-300 gap-2">✔ 300 GB Storage</p>
+          <p class="flex items-center text-gray-300 gap-2">✔ Unlimited Photos</p>
+          <p class="flex items-center text-gray-300 gap-2">✔ Support</p>
+          <p class="flex items-center text-gray-500 gap-2">✖ SEO Tools</p>
         </div>
-        </div>
-        <div class="pt-12 text-center ">
-          <h3 class="font-bold mb-5 text-xl sm:text-3xl text-white">
-            Looking for a company solution? 
-          </h3>
-          <p class="text-gray-400 text-base">
-            Contact our team to get a quote.
-          </p>
-        </div>
+
+        <button class="w-full inline-flex items-center justify-center bg-gray-700  text-white py-3 rounded-lg">
+          Join Plan<img src="image/3-removebg-preview.png"class="w-8 h-8">
+        </button>
       </div>
-    </section>
+
+      <!-- BASIC (Featured) -->
+      <div class=" relative p-8 text-center shadow-xl">
+
+        <!-- <span class="absolute top-0 right-0 bg-white text-blue-600 text-xs px-3 py-1 rounded-bl-xl font-bold">
+          Popular
+        </span> -->
+
+        <h3 class="text-2xl font-bold text-white mb-2">Basic</h3>
+        <p class="text-blue-100 mb-6">Most popular plan</p>
+
+        <h3 class="text-white text-4xl font-bold mb-4">$29<span class="text-base font-normal">/month</span></h3>
+
+        <p class="text-blue-100 mb-8">Best for growing startups</p>
+
+        <div class="space-y-4 text-left mb-10">
+          <p class="flex items-center text-white gap-2">✔ 300 GB Storage</p>
+          <p class="flex items-center text-white gap-2">✔ Unlimited Photos</p>
+          <p class="flex items-center text-white gap-2">✔ Support</p>
+          <p class="flex items-center text-white gap-2">✔ SEO Tools</p>
+        </div>
+
+        <button class="w-full inline-flex items-center justify-center bg-blue-500  text-white py-3 rounded-lg">
+          Join Plan<img src="image/3-removebg-preview.png"class="w-8 h-8">
+        </button>
+      </div>
+
+      <!-- PREMIUM -->
+      <div class=" p-8 text-center">
+        <h3 class="text-2xl font-bold text-white mb-2">Premium</h3>
+        <p class="text-gray-400 mb-6">Advanced features</p>
+
+        <h3 class="text-white text-4xl font-bold mb-4">$99<span class="text-base font-normal">/month</span></h3>
+
+        <p class="text-gray-400 mb-8">For large businesses</p>
+
+        <div class="space-y-4 text-left mb-10">
+          <p class="flex items-center text-gray-300 gap-2">✔ 300 GB Storage</p>
+          <p class="flex items-center text-gray-300 gap-2">✔ Unlimited Photos</p>
+          <p class="flex items-center text-gray-300 gap-2">✔ Support</p>
+          <p class="flex items-center text-gray-300 gap-2">✔ SEO Tools</p>
+        </div>
+
+        <button class="w-full inline-flex items-center justify-center bg-gray-700  text-white py-3 rounded-lg">
+          Join Plan<img src="image/3-removebg-preview.png"class="w-8 h-8">
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Bottom CTA -->
+    <div class="pt-16 text-center">
+      <h3 class="text-xl sm:text-2xl font-bold text-white mb-3">
+        Looking for a company solution?
+      </h3>
+      <p class="text-gray-400">
+        Contact our team to get a quote.
+      </p>
+    </div>
+
+  </div>
+</section>
     <section class="pt-14 sm:pt-20 lg:pt-[130px]">
       <div class="px-4 xl:container ">
         <div class="relative mx-auto mb-12 max-w-[620px] pt-6 text-center md:mb-20 lg:pt-16">
@@ -782,9 +685,9 @@
             <div class="w-full px-4 md:w-1/2 lg:w-1/3">
               <div class=" mb-10">
                 <div class="relative mb-8 overflow-hidden rounded-sm">
-                  <a class="block">
+                  <span>
                     <img src="/image/image-15.jpg" alt="blog-image" class="w-full">
-                  </a>
+                  </span>
                   <span class="absolute top-5 left-5 rounded-sm px-4 py-[6px] text-sm  font-bold text-white bg-blue-600">
                     Web Development
                   </span>
@@ -939,7 +842,7 @@
                 </div>
               </div>
               <div class="w-full px-4">
-                <button class="font-bold bg-blue-600 flex w-full items-center justify-center rounded-sm px-8 py-[14px] text-base text-white">
+                <button class="font-bold bg-blue-600 flex w-full items-center justify-center rounded-sm px-8 py-[14px] text-base text-white V]lg:flex items-center gap-4 mr-20 text-white">
                   Send Message
                 </button>
               </div>
@@ -948,215 +851,150 @@
         </div>
       </div>
     </section>
-    <section class="pt-14 sm:pt-20 lg:pt-[130px]">
-      <div class="px-4 xl:container ml-20">
-        <div class="relative overflow-hidden bg-cover bg-center px-10 py-[60px] sm:px-[70px]">
-          <div class="absolute top-0 left-0 -z-10 h-full w-full bg-cover bg-center opacity-10"></div>
-          <div class="absolute bottom-0 left-1/2 -z-10 -translate-x-1/2">
-            <svg width="1215" height="259" viewBox="0 0 1215 259" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <g opacity="0.6" filter="url(#filter0_f_63_363)">
-                <rect x="450" y="189" width="315" height="378" fill="url(#paint0_linear_63_363)"></rect>
-              </g>
-              <defs>
-                <filter id="filter0_f_63_363" x="0" y="-261" width="1215" height="1278" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                  <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
-                  <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feBlend>
-                  <feGaussianBlur stdDeviation="225" result="effect1_foregroundBlur_63_363"></feGaussianBlur>
-                </filter>
-                <linearGradient id="paint0_linear_63_363" x1="420.718" y1="263.543" x2="585.338" y2="628.947" gradientUnits="userSpaceOnUse">
-                  <stop stop-color="#ABBCFF"></stop>
-                  <stop offset="0.859375" stop-color="#4A6CF7"></stop>
-                </linearGradient>
-              </defs>
-            </svg>
-          </div>
+          <div class="-mx-4 flex flex-col lg:flex-row items-center">
+  
+  <!-- LEFT -->
+  <div class="w-full px-4 lg:w-2/3">
+    <div class="mx-auto mb-8 max-w-[550px] text-center lg:mb-0 lg:text-left">
+      <h2 class="font-bold mb-4 text-xl sm:text-3xl md:text-[38px] leading-tight">
+        Looking for a collaboration? Get Started Today!
+      </h2>
+      <p class="text-gray-400 text-base">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      </p>
+    </div>
+  </div>
 
-          <div class="-mx-4 flex flex-wrap items-center">
-            <div class="w-full px-4 lg:w-2/3">
-              <div class="mx-auto mb-10 max-w-[550px] text-center lg:mb-0 lg:ml-0 lg:text-left">
-                <h2 class="font-bold mb-4 text-xl leading-tight sm:text-[38px]">
-                  Looking for a collaboration? Get Started Today!
-                </h2>
-                <p class="text-gray-400 text-base">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </p>
-              </div>
-            </div>
-            <div class="w-full px-4 lg:w-1/3">
-              <div class="text-center lg:text-right">
-                <a class="inline-flex items-center rounded-sm px-8 py-[14px] text-base bg-blue-600">
-                  Get Started Now
-                </a>
-              </div>
-            </div>
+  <!-- RIGHT -->
+  <div class="w-full px-4 lg:w-1/3">
+    <div class="text-center lg:text-right mt-4 lg:mt-0">
+      <a class="inline-flex items-center rounded-md px-6 py-3 text-base bg-blue-600 text-white hover:bg-blue-700 transition">
+        Get Started Now
+      </a>
+    </div>
+  </div>
+
+</div>
+</div>
+</div>
+</section>
+
+<footer class="pt-14 sm:pt-20 bg-slate-950">
+  
+  <!-- FIXED CONTAINER -->
+  <div class="px-4 mx-auto max-w-7xl">
+
+    <div class="flex flex-wrap">
+
+      <!-- LOGO -->
+      <div class="w-full px-4 sm:w-1/2 md:w-5/12 lg:w-3/12">
+        <div class="mb-12">
+          <a href="#" class="mb-6 inline-block">
+            <img src="/image/logo-dark.svg" alt="logo">
+          </a>
+          <p class="text-gray-400 mb-6 text-sm sm:text-base">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </p>
+
+          <div class="flex items-center space-x-4">
+            <img src="/image/facebook-log.png" class="w-5 h-5">
+            <img src="/image/twitter-logo.png" class="w-5 h-5">
+            <img src="/image/linkdin.png" class="w-5 h-5">
+            <img src="/image/log-be-removebg-preview.png" class="w-5 h-5">
           </div>
         </div>
       </div>
-    </section>
-    <footer class="pt-14  sm:pt-20">
-      <div class="px-4 mx-20 xl:container">
-        <div class="flex flex-wrap">
-          <div class="w-full px-4 sm:w-1/2 md:w-5/12 lg:w-3/12 xl:w-3/12">
-            <div class="mb-20 max-w-330">
-              <a href="#" class="mb-6 inline-block">
-                <img src="/image/logo-dark.svg" alt="logo">
+
+      <!-- COMPANY -->
+      <div class="w-1/2 px-4 md:w-3/12 lg:w-2/12">
+        <div class="mb-12">
+          <h3 class="mb-6 text-lg sm:text-xl font-medium text-white">Company</h3>
+          <ul class="space-y-3 text-sm sm:text-base">
+            <li><a class="text-gray-400">Home</a></li>
+            <li><a class="text-gray-400">Product</a></li>
+            <li>
+              <a class="text-gray-400">
+                Careers
+                <span class="bg-blue-500 ml-2 rounded px-2 py-1 text-xs text-white">Hiring</span>
               </a>
-              <p class="text-gray-400 mb-10 text-lg">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              </p>
-              <div class="flex items-center space-x-5">
-                <a class="text-dark-text">
-                  <img src="/image/facebook-log.png"class="w-6 h-5">
-                </a>
-                <a class="text-dark-text">
-                  <img src="/image/twitter-logo.png"class=" text-grey-700 w-4 h-5">
-                </a>
-                <a class="text-dark-text">
-                  <img src="/image/linkdin.png"class=" text-grey-700 w-5 h-5">
-                </a>
-                <a class="text-dark-text">
-                  <img src="/image/log-be-removebg-preview.png"class=" text-grey-700 w-6 h-6">
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="w-1/2 px-4 md:w-3/12 lg:w-3/12 xl:w-2/12">
-            <div class="mb-20">
-              <h3 class="mb-9 text-2xl font-medium">
-                Company
-              </h3>
-
-              <ul class="space-y-4">
-                <li>
-                  <a class="text-gray-400">
-                    Home
-                  </a>
-                </li>
-                <li>
-                  <a class="text-gray-400">
-                    Product
-                  </a>
-                </li>
-                <li>
-                  <a class="text-gray-400">
-                    Careers
-                    <span class="bg-blue-500 font-bold ml-4 rounded-sm px-2 py-1 text-xs text-white">
-                      Hiring
-                    </span>
-                  </a>
-                </li>
-                <li>
-                  <a class="text-gray-400">
-                    Pricing
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="w-1/2 px-4 md:w-3/12 lg:w-3/12 xl:w-2/12">
-            <div class="mb-20">
-              <h3 class="text-bold mb-9 text-2xl">
-                Support
-              </h3>
-
-              <ul class="space-y-4">
-                <li>
-                  <a class="text-gray-400">
-                    Company
-                  </a>
-                </li>
-                <li>
-                  <a class="text-gray-400">
-                    Press media
-                  </a>
-                </li>
-                <li>
-                  <a class="text-gray-400">
-                    Our Blog
-                  </a>
-                </li>
-                <li>
-                  <a class="text-gray-400">
-                    Contact Us
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="w-full px-4 sm:w-1/2 md:w-5/12 lg:w-3/12 xl:w-2/12">
-            <div class="mb-20">
-              <h3 class="mb-9 text-2xl font-medium">
-                Get in touch
-              </h3>
-
-              <div class="space-y-7">
-                <div>
-                  <p class="text-gray-400">
-                    Toll Free Customer Care
-                  </p>
-                  <a class="font-bold">
-                    +(1) 123 456 7890
-                  </a>
-                </div>
-                <div>
-                  <p class="text-gray-400">
-                    Need live support?
-                  </p>
-                  <a class="font-bold">
-                    support@domain.com
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="w-full px-4 sm:w-1/2 md:w-5/12 lg:w-5/12 xl:w-3/12">
-            <div class="mb-20">
-              <h3 class="font-bold mb-9 text-2xl">
-                Newsletter
-              </h3>
-              <p class="text-gray-400 mb-6 text-base">
-                Subscribe to receive future updates
-              </p>
-              <form class="relative">
-                <input type="email" name="email"placeholder="Email address" class=" text-gray-700 w-full rounded-sm py-3 pr-12 pl-5 text-base bg-gray-700">
-                <button class=" absolute top-0 right-0 flex h-full w-12 items-center justify-center border-l border-gray-950">
-                  <img src="/image/log_of_subumitt.png"class="w-5 h-5">
-
-                </button>
-              </form>
-            </div>
-          </div>
+            </li>
+            <li><a class="text-gray-400">Pricing</a></li>
+          </ul>
         </div>
+      </div>
 
-        <div class="md:border-t">
-          <div class="mx-4 flex flex-wrap py-5 md:py-7">
-            <div class="w-full px-4 md:w-1/2 lg:w-2/3">
-              <div class="mb-5 flex items-center justify-center space-x-5 border-b pb-5 md:mb-0 md:justify-start md:border-0 md:pb-0">
-                <a class=" text-gray-400">
-                  English
-                </a>
-                <a class="text-gray-400">
-                  Privacy Policy
-                </a>
-                <a class="text-gray-400">
-                  Support
-                </a>
-              </div>
+      <!-- SUPPORT -->
+      <div class="w-1/2 px-4 md:w-3/12 lg:w-2/12">
+        <div class="mb-12">
+          <h3 class="mb-6 text-lg sm:text-xl font-medium text-white">Support</h3>
+          <ul class="space-y-3 text-sm sm:text-base">
+            <li><a class="text-gray-400">Company</a></li>
+            <li><a class="text-gray-400">Press media</a></li>
+            <li><a class="text-gray-400">Our Blog</a></li>
+            <li><a class="text-gray-400">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- CONTACT -->
+      <div class="w-full px-4 sm:w-1/2 md:w-5/12 lg:w-3/12">
+        <div class="mb-12">
+          <h3 class="mb-6 text-lg sm:text-xl font-medium text-white">Get in touch</h3>
+
+          <div class="space-y-5 text-sm sm:text-base">
+            <div>
+              <p class="text-gray-400">Toll Free Customer Care</p>
+              <p class="font-bold text-white">+(1) 123 456 7890</p>
             </div>
-            <div class="w-full px-4 md:w-1/2 lg:w-1/3">
-              <div>
-                <p class="text-gray-400 lg:text-right">
-                  © 2025 Startup. All rights reserved
-                </p>
-              </div>
+
+            <div>
+              <p class="text-gray-400">Need live support?</p>
+              <p class="font-bold text-white">support@domain.com</p>
             </div>
           </div>
         </div>
       </div>
+
+      <!-- NEWSLETTER -->
+      <div class="w-full px-4 sm:w-1/2 md:w-5/12 lg:w-5/12">
+        <div class="mb-12">
+          <h3 class="mb-6 text-lg sm:text-xl font-bold text-white">Newsletter</h3>
+          <p class="text-gray-400 mb-4 text-sm sm:text-base">
+            Subscribe to receive future updates
+          </p>
+
+          <form class="relative">
+            <input 
+              type="email" 
+              placeholder="Email address"
+              class="w-full rounded-md py-3 pl-4 pr-12 bg-gray-800 text-white text-sm outline-none"
+            >
+            <button class="absolute top-0 right-0 h-full w-12 flex items-center justify-center text-white">
+              <img src="/image/log_of_subumitt.png" class="w-4 h-4">
+            </button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- BOTTOM BAR -->
+    <div class="border-t border-gray-800 pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
+
+      <div class="flex flex-wrap justify-center md:justify-start gap-4 text-gray-400">
+        <span>English</span>
+        <span>Privacy Policy</span>
+        <span>Support</span>
+      </div>
+
+      <p class="text-gray-400 text-center md:text-right">
+        © 2025 Startup. All rights reserved
+      </p>
+
+    </div>
+
+  </div>
+</footer>
     </footer>
 </body>
 </html>
